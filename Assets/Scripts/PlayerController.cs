@@ -89,19 +89,19 @@ public class PlayerController : MonoBehaviour
     {
         if (currentSpeedX < 3.75f)
         {
-            jumpSpeedY = 15f/2;
+            jumpSpeedY = 6f;
             jumpUpGravity = .47f;
             jumpDownGravity = 1.64f;
         }
         else if (currentSpeedX < 8.67f)
         {
-            jumpSpeedY = 15f/2;
+            jumpSpeedY = 5f;
             jumpUpGravity = .44f;
             jumpDownGravity = 1.41f;
         }
         else
         {
-            jumpSpeedY = 18.75f/2;
+            jumpSpeedY = 8f;
             jumpUpGravity = .59f;
             jumpDownGravity = 2.11f;
         }

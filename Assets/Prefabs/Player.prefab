@@ -24,11 +24,41 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 181503075824414101}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.28, y: -4.36, z: 0}
+  m_LocalPosition: {x: -2.95, y: -4.36, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3459699889960100688}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3081609282073110146
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1549486139355780343}
+  m_Layer: 0
+  m_Name: GroundCheckPoint2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1549486139355780343
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3081609282073110146}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.06, y: -4.36, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3459699889960100688}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3459699889443218414
 GameObject:
@@ -224,6 +254,7 @@ Transform:
   - {fileID: 3459699889443218409}
   - {fileID: 3459699890131612735}
   - {fileID: 874723375676665152}
+  - {fileID: 1549486139355780343}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -322,12 +353,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad88d19910d74174f897994087298641, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundCheckPoint: {fileID: 874723375676665152}
-  groundCheckRadius: 3.372916
-  groundLayer:
+  m_GroundCheck1: {fileID: 874723375676665152}
+  m_GroundCheck2: {fileID: 1549486139355780343}
+  groundCheckRadius1: 0.1
+  groundCheckRadius2: 0.1
+  GroundLayers:
     serializedVersion: 2
     m_Bits: 256
-  speed: 4
+  Fireball: {fileID: 0}
+  FirePos: {fileID: 0}
+  castleWalkSpeedX: 5.86
+  levelEntryWalkSpeedX: 3.05
+  isCrouching: 0
+  inputFreezed: 0
 --- !u!61 &3459699889960100691
 BoxCollider2D:
   m_ObjectHideFlags: 0

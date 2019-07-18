@@ -375,6 +375,8 @@ public class PlayerController : MonoBehaviour
         isChangingDirection = currentSpeedX > 0 && faceDirectionX * moveDirectionX < 0;
 
         m_Animator.SetFloat("speed", Mathf.Abs(currentSpeedX));
+        m_Animator.SetBool("isGrounded", isGrounded);
+
 
         Debug.Log("faceDirectionX=" + faceDirectionX);
         /*

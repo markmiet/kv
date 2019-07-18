@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     public Transform m_GroundCheck1, m_GroundCheck2;
     public float groundCheckRadius1, groundCheckRadius2;
     private GameObject m_StompBox;
-    private Animator m_Animator;
+    public Animator m_Animator;
     private Rigidbody2D m_Rigidbody2D;
     private BoxCollider2D m_CircleCollider2D;
 
@@ -67,7 +67,7 @@ public class PlayerController : MonoBehaviour
         //m_GroundCheck1 = transform.FindChild("Ground Check 1");
         //m_GroundCheck2 = transform.FindChild("Ground Check 2");
         //m_StompBox = transform.FindChild("Stomp Box").gameObject;
-        m_Animator = GetComponent<Animator>();
+        //m_Animator = GetComponent<Animator>();
         m_Rigidbody2D = GetComponent<Rigidbody2D>();
         m_CircleCollider2D = GetComponent<BoxCollider2D>();
         normalGravity = m_Rigidbody2D.gravityScale;

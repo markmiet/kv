@@ -59,6 +59,7 @@ public class PlayerController : MonoBehaviour
 
     public bool inputFreezed;
 
+    private SpriteRenderer spriteRenderer;
 
     // Use this for initialization
     void Start()
@@ -71,6 +72,8 @@ public class PlayerController : MonoBehaviour
         m_Rigidbody2D = GetComponent<Rigidbody2D>();
         m_CircleCollider2D = GetComponent<BoxCollider2D>();
         normalGravity = m_Rigidbody2D.gravityScale;
+
+        spriteRenderer = GetComponent<SpriteRenderer>();
 
         // Drop Mario at spawn position
         //transform.position = FindObjectOfType<LevelManager>().FindSpawnPosition();
@@ -362,15 +365,37 @@ public class PlayerController : MonoBehaviour
 
         //isTouchingGround = Physics2D.OverlapCircle(groundCheckPoint.position, groundCheckRadius, groundLayer);
 
-
+        /*
         if (isGrounded)
         {
             Debug.Log("maassa");
         }
+        */
 
         isChangingDirection = currentSpeedX > 0 && faceDirectionX * moveDirectionX < 0;
 
         m_Animator.SetFloat("speed", Mathf.Abs(currentSpeedX));
+
+        Debug.Log("faceDirectionX=" + faceDirectionX);
+        /*
+        if (currentSpeedX<-0.01)
+        {
+            spriteRenderer.flipX = true;
+        }
+        else if (currentSpeedX > 0.01)
+        {
+            //m_Animator.SetBool("mirror", false);
+        }
+        */
+        if (faceDirectionX==-1)
+        {
+            spriteRenderer.flipX = true;
+        }
+        else if (faceDirectionX==1)
+        {
+            spriteRenderer.flipX = false;
+        }
+
     }
 
 

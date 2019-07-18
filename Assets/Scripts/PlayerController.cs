@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     private GameObject m_StompBox;
     private Animator m_Animator;
     private Rigidbody2D m_Rigidbody2D;
-    private PolygonCollider2D m_CircleCollider2D;
+    private BoxCollider2D m_CircleCollider2D;
 
     public LayerMask GroundLayers;
     public GameObject Fireball;
@@ -67,9 +67,9 @@ public class PlayerController : MonoBehaviour
         //m_GroundCheck1 = transform.FindChild("Ground Check 1");
         //m_GroundCheck2 = transform.FindChild("Ground Check 2");
         //m_StompBox = transform.FindChild("Stomp Box").gameObject;
-        //m_Animator = GetComponent<Animator>();
+        m_Animator = GetComponent<Animator>();
         m_Rigidbody2D = GetComponent<Rigidbody2D>();
-        m_CircleCollider2D = GetComponent<PolygonCollider2D>();
+        m_CircleCollider2D = GetComponent<BoxCollider2D>();
         normalGravity = m_Rigidbody2D.gravityScale;
 
         // Drop Mario at spawn position
@@ -369,6 +369,8 @@ public class PlayerController : MonoBehaviour
         }
 
         isChangingDirection = currentSpeedX > 0 && faceDirectionX * moveDirectionX < 0;
+
+        m_Animator.SetFloat("speed", Mathf.Abs(currentSpeedX));
     }
 
 

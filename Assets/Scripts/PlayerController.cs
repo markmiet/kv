@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     private GameObject m_StompBox;
     public Animator m_Animator;
     private Rigidbody2D m_Rigidbody2D;
-    private BoxCollider2D m_CircleCollider2D;
+    public CapsuleCollider2D biggerCircleCollider2D;
 
     public LayerMask GroundLayers;
     public GameObject Fireball;
@@ -70,7 +70,7 @@ public class PlayerController : MonoBehaviour
         //m_StompBox = transform.FindChild("Stomp Box").gameObject;
         //m_Animator = GetComponent<Animator>();
         m_Rigidbody2D = GetComponent<Rigidbody2D>();
-        m_CircleCollider2D = GetComponent<BoxCollider2D>();
+        //m_CircleCollider2D = GetComponent<CircleCollider2D>();
         normalGravity = m_Rigidbody2D.gravityScale;
 
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -272,17 +272,18 @@ public class PlayerController : MonoBehaviour
 
         // Disable Stomp Box if not falling down
         // Disable Circle Collider if falling down (to prevent multi collisions registered)
+        
         if (!isFalling)
         {
             //m_StompBox.SetActive(false);
-            m_CircleCollider2D.enabled = true;
+            biggerCircleCollider2D.enabled = true;
         }
         else
         {
             //m_StompBox.SetActive(true);
-            m_CircleCollider2D.enabled = false;
+            biggerCircleCollider2D.enabled = false;
         }
-
+        
 
 
         /******** Horizontal orientation */
@@ -389,11 +390,11 @@ public class PlayerController : MonoBehaviour
             //m_Animator.SetBool("mirror", false);
         }
         */
-        if (faceDirectionX==-1)
+        if (faceDirectionX == -1)
         {
             spriteRenderer.flipX = true;
         }
-        else if (faceDirectionX==1)
+        else if (faceDirectionX == 1)
         {
             spriteRenderer.flipX = false;
         }

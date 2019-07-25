@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     private GameObject m_StompBox;
     public Animator m_Animator;
     private Rigidbody2D m_Rigidbody2D;
-    public CapsuleCollider2D biggerCircleCollider2D;
+    //public CapsuleCollider2D biggerCircleCollider2D;
 
     public LayerMask GroundLayers;
     public GameObject Fireball;
@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
 
     public bool inputFreezed;
 
-    private SpriteRenderer spriteRenderer;
+    private SpriteRenderer[] spriteRenderer;
 
     // Use this for initialization
     void Start()
@@ -72,8 +72,8 @@ public class PlayerController : MonoBehaviour
         m_Rigidbody2D = GetComponent<Rigidbody2D>();
         //m_CircleCollider2D = GetComponent<CircleCollider2D>();
         normalGravity = m_Rigidbody2D.gravityScale;
-
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponentsInChildren<SpriteRenderer>();
+        //spriteRenderer = GetComponent<SpriteRenderer>();
 
         // Drop Mario at spawn position
         //transform.position = FindObjectOfType<LevelManager>().FindSpawnPosition();
@@ -272,7 +272,7 @@ public class PlayerController : MonoBehaviour
 
         // Disable Stomp Box if not falling down
         // Disable Circle Collider if falling down (to prevent multi collisions registered)
-        
+        /*
         if (!isFalling)
         {
             //m_StompBox.SetActive(false);
@@ -283,7 +283,7 @@ public class PlayerController : MonoBehaviour
             //m_StompBox.SetActive(true);
             biggerCircleCollider2D.enabled = false;
         }
-        
+      */
 
 
         /******** Horizontal orientation */
@@ -378,6 +378,7 @@ public class PlayerController : MonoBehaviour
         m_Animator.SetFloat("speed", Mathf.Abs(currentSpeedX));
         m_Animator.SetBool("isGrounded", isGrounded);
 
+        
 
         Debug.Log("faceDirectionX=" + faceDirectionX);
         /*
@@ -390,15 +391,32 @@ public class PlayerController : MonoBehaviour
             //m_Animator.SetBool("mirror", false);
         }
         */
-        if (faceDirectionX == -1)
-        {
-            spriteRenderer.flipX = true;
-        }
-        else if (faceDirectionX == 1)
-        {
-            spriteRenderer.flipX = false;
-        }
 
+        if (currentSpeedX > 0.01)
+        {
+            if (faceDirectionX == -1)
+            {
+                foreach (SpriteRenderer value in spriteRenderer)
+                {
+                    value.flipX = true;
+                }
+
+            }
+            else if (faceDirectionX == 1)
+            {
+                foreach (SpriteRenderer value in spriteRenderer)
+                {
+                    value.flipX = false;
+                }
+            }
+        }
+        else
+        {
+            foreach (SpriteRenderer value in spriteRenderer)
+            {
+                value.flipX = false;
+            }
+        }
     }
 
 

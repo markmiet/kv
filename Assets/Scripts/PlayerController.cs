@@ -378,9 +378,19 @@ public class PlayerController : MonoBehaviour
         m_Animator.SetFloat("speed", Mathf.Abs(currentSpeedX));
         m_Animator.SetBool("isGrounded", isGrounded);
 
-        
+        if (faceDirectionX == -1)
+        {
+            m_Animator.SetBool("faceDirectionX", true);
+        }
+        else if (faceDirectionX == 1)
+        {
+            m_Animator.SetBool("faceDirectionX", false);
 
-        Debug.Log("faceDirectionX=" + faceDirectionX);
+        }
+
+
+
+            Debug.Log("faceDirectionX=" + faceDirectionX);
         /*
         if (currentSpeedX<-0.01)
         {
@@ -391,10 +401,21 @@ public class PlayerController : MonoBehaviour
             //m_Animator.SetBool("mirror", false);
         }
         */
-
-        if (currentSpeedX > 0.01)
+        /*
+        if (m_Animator.GetCurrentAnimatorStateInfo(0).IsName("Ukkoidle") ||
+            m_Animator.GetCurrentAnimatorStateInfo(0).IsName("Ukkojumppaikaltaan"))
         {
-            if (faceDirectionX == -1)
+            Debug.Log("ukkoidlee");
+            foreach (SpriteRenderer value in spriteRenderer)
+            {
+                value.flipX = false;
+            }
+        }
+
+        else 
+        */
+        
+        if (faceDirectionX == -1)
             {
                 foreach (SpriteRenderer value in spriteRenderer)
                 {
@@ -407,16 +428,12 @@ public class PlayerController : MonoBehaviour
                 foreach (SpriteRenderer value in spriteRenderer)
                 {
                     value.flipX = false;
+                
                 }
             }
-        }
-        else
-        {
-            foreach (SpriteRenderer value in spriteRenderer)
-            {
-                value.flipX = false;
-            }
-        }
+    
+
+
     }
 
 

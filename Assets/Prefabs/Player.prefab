@@ -133,7 +133,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3081609282073110146}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.01, y: -12.12, z: 0}
+  m_LocalPosition: {x: 0.78, y: -6.61, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3459699889960100688}
@@ -168,7 +168,7 @@ Transform:
   m_GameObject: {fileID: 3459699889960100693}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.29, y: 2.35, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 0.04, y: 0.04, z: 0.1}
   m_Children:
   - {fileID: 1549486139355780343}
   - {fileID: 874723375676665152}
@@ -193,12 +193,12 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 3.0540435
+  m_Mass: 0.48864695
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
-  m_Interpolate: 1
+  m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
@@ -221,7 +221,7 @@ MonoBehaviour:
   m_Animator: {fileID: 8056197799856538714}
   GroundLayers:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 768
   Fireball: {fileID: 0}
   FirePos: {fileID: 0}
   castleWalkSpeedX: 5.86

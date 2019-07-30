@@ -373,10 +373,14 @@ public class PlayerController : MonoBehaviour
         }
         */
 
-        isChangingDirection = currentSpeedX > 0 && faceDirectionX * moveDirectionX < 0;
+        //isChangingDirection = currentSpeedX > 0 && faceDirectionX * moveDirectionX < 0;
 
-        m_Animator.SetFloat("speed", Mathf.Abs(currentSpeedX));
+        //m_Animator.SetFloat("speed", Mathf.Abs(currentSpeedX));
         m_Animator.SetBool("isGrounded", isGrounded);
+
+        m_Animator.SetFloat("speed", Mathf.Abs(m_Rigidbody2D.velocity.x));
+
+        Debug.Log("Mathf.Abs(m_Rigidbody2D.velocity.x)=" + Mathf.Abs(m_Rigidbody2D.velocity.x));
 
         if (faceDirectionX == -1)
         {
@@ -389,8 +393,6 @@ public class PlayerController : MonoBehaviour
         }
 
 
-
-            Debug.Log("faceDirectionX=" + faceDirectionX);
         /*
         if (currentSpeedX<-0.01)
         {
@@ -414,24 +416,24 @@ public class PlayerController : MonoBehaviour
 
         else 
         */
-        
+
         if (faceDirectionX == -1)
+        {
+            foreach (SpriteRenderer value in spriteRenderer)
             {
-                foreach (SpriteRenderer value in spriteRenderer)
-                {
-                    value.flipX = true;
-                }
+                value.flipX = true;
+            }
+
+        }
+        else if (faceDirectionX == 1)
+        {
+            foreach (SpriteRenderer value in spriteRenderer)
+            {
+                value.flipX = false;
 
             }
-            else if (faceDirectionX == 1)
-            {
-                foreach (SpriteRenderer value in spriteRenderer)
-                {
-                    value.flipX = false;
-                
-                }
-            }
-    
+        }
+
 
 
     }

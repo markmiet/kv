@@ -95,7 +95,7 @@ MonoBehaviour:
   m_MinSize: {x: 102, y: 120}
   m_MaxSize: {x: 4002, y: 4020}
   vertical: 0
-  controlID: 29
+  controlID: 141
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -187,7 +187,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 472}
   m_MaxSize: {x: 14000, y: 14022}
   vertical: 0
-  controlID: 4387
+  controlID: 2557
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -212,7 +212,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 472}
   m_MaxSize: {x: 10000, y: 14022}
   vertical: 1
-  controlID: 4303
+  controlID: 2464
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -237,7 +237,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 222}
   m_MaxSize: {x: 8004, y: 4022}
   vertical: 0
-  controlID: 4304
+  controlID: 2465
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -375,7 +375,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 16024
+  m_LastSelectedObjectID: 17628
 --- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -486,9 +486,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 983e0000
-      m_LastClickedID: 16024
-      m_ExpandedIDs: 84fbffff
+      m_SelectedIDs: dc440000
+      m_LastClickedID: 17628
+      m_ExpandedIDs: b2eeffffce440000dc440000e4440000ec440000ee440000f4440000f844000004450000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -548,7 +548,7 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.7929609, y: 7.9609175, z: 0.000000007450581}
+    m_Target: {x: -1.2621461, y: 13.84117, z: -0.09555151}
     speed: 2
     m_Value: {x: -0.7929609, y: 7.9609175, z: 0.000000007450581}
   m_RenderMode: 0
@@ -583,7 +583,7 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 16.728518
+    m_Target: 2.0121374
     speed: 2
     m_Value: 16.728518
   m_Ortho:
@@ -744,7 +744,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_ResetOnNextRepaint: 0
   m_SelectedAssetPath: Assets/Art/Sprites/Characters/nukke3/walking/kokoukkosivusta.png
-  m_SelectedSpriteRectGUID: 5032d332ad81d514bb7d74f4756365d3
+  m_SelectedSpriteRectGUID: 5f18ba3f69d06474bb3bc8cdda854cf0
   m_LastUsedModuleTypeName: UnityEditor.Experimental.U2D.Animation.SkinningModule
 --- !u!114 &22
 MonoBehaviour:

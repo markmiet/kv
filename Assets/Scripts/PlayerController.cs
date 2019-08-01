@@ -434,6 +434,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+        Debug.Log("idle="+m_Animator.GetCurrentAnimatorStateInfo(0).IsName("Ukkoidle"));
 
 
     }

@@ -62,7 +62,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\PelaajaController.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\TestiSkripti.cs" />
     <Compile Include="Assets\Unity Technologies\2D Sprite Shape\Extras\Scripts\Clipper.cs" />
     <Compile Include="Assets\Unity Technologies\2D Sprite Shape\Extras\Scripts\ConformingSpline.cs" />
     <Compile Include="Assets\Unity Technologies\2D Sprite Shape\Extras\Scripts\GeometryCollider.cs" />

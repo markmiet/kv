@@ -379,6 +379,9 @@ public class PlayerController : MonoBehaviour
         m_Animator.SetBool("isGrounded", isGrounded);
 
         m_Animator.SetFloat("speed", Mathf.Abs(m_Rigidbody2D.velocity.x));
+        float speedi = Mathf.Abs(m_Rigidbody2D.velocity.x);
+        if (speedi >0.0)
+            Debug.Log("speedid =" + speedi);
 
         Debug.Log("Mathf.Abs(m_Rigidbody2D.velocity.x)=" + Mathf.Abs(m_Rigidbody2D.velocity.x));
 
@@ -436,6 +439,7 @@ public class PlayerController : MonoBehaviour
 
         Debug.Log("idle="+m_Animator.GetCurrentAnimatorStateInfo(0).IsName("Ukkoidle"));
 
+    
 
     }
 

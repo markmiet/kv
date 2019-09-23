@@ -103,10 +103,10 @@ GameObject:
   - component: {fileID: 2999505770970982201}
   - component: {fileID: 6338229887793751317}
   - component: {fileID: 893945560097117351}
-  - component: {fileID: 6807502037604749470}
   - component: {fileID: 2634374152281051151}
   - component: {fileID: 1628388063464499517}
   - component: {fileID: 5676104707829230423}
+  - component: {fileID: 1766070609019682191}
   m_Layer: 10
   m_Name: kokoukkosivusta
   m_TagString: Untagged
@@ -219,32 +219,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!61 &6807502037604749470
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2999505770970982206}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.1121974, y: 0.42743158}
-  m_SpriteTilingProperty:
-    border: {x: 7.8799996, y: 4.920676, z: 10.53, w: 13.16181}
-    pivot: {x: 0.4536138, y: 0.42592588}
-    oldSize: {x: 41.199997, y: 51.607094}
-    newSize: {x: 41.199997, y: 51.607094}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 11.46778, y: 27.065899}
-  m_EdgeRadius: 0
 --- !u!114 &2634374152281051151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,6 +286,32 @@ MonoBehaviour:
   levelEntryWalkSpeedX: 3.05
   isCrouching: 0
   inputFreezed: 0
+--- !u!61 &1766070609019682191
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2999505770970982206}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.6140356, y: 0.0994854}
+  m_SpriteTilingProperty:
+    border: {x: 7.8799996, y: 4.920676, z: 10.53, w: 13.16181}
+    pivot: {x: 0.4536138, y: 0.42592588}
+    oldSize: {x: 41.199997, y: 51.607094}
+    newSize: {x: 41.199997, y: 51.607094}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 8.040495, y: 27.957302}
+  m_EdgeRadius: 0.001
 --- !u!1 &4003199304154924885
 GameObject:
   m_ObjectHideFlags: 0

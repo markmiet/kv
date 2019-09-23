@@ -134,10 +134,12 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+
+        
         /******** Horizontal movement on ground */
         if (isGrounded)
         {
-            Debug.Log("is grounded");
+            //Debug.Log("is grounded");
             // If holding directional button, accelerate until reach max walk speed
             // If holding Dash, accelerate until reach max run speed
             if (faceDirectionX != 0)
@@ -257,7 +259,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            Debug.Log("jumping");
+            //Debug.Log("jumping");
             // lower gravity if Jump button held; increased gravity if released
             if (m_Rigidbody2D.velocity.y > 0 && jumpButtonHeld)
             {
@@ -334,6 +336,7 @@ public class PlayerController : MonoBehaviour
         {
             moveDirectionX = faceDirectionX;
         }
+        Debug.Log("currentSpeedX=" + currentSpeedX+ " isDashing="+ isDashing);
 
     }
 
@@ -343,9 +346,9 @@ public class PlayerController : MonoBehaviour
     {
 
         faceDirectionX = Input.GetAxisRaw("Horizontal"); // > 0 for right, < 0 for left
-                                                         //isDashing = Input.GetButton("Dash");
-                                                         //isCrouching = Input.GetButton("Crouch");
-                                                         //isShooting = Input.GetButtonDown("Dash");
+        isDashing = Input.GetButton("Dash");
+        //isCrouching = Input.GetButton("Crouch");
+        //isShooting = Input.GetButtonDown("Dash");
         jumpButtonHeld = Input.GetButton("Jump");
         if (Input.GetButtonUp("Jump"))
         {
@@ -380,10 +383,10 @@ public class PlayerController : MonoBehaviour
 
         m_Animator.SetFloat("speed", Mathf.Abs(m_Rigidbody2D.velocity.x));
         float speedi = Mathf.Abs(m_Rigidbody2D.velocity.x);
-        if (speedi >0.0)
-            Debug.Log("speedid =" + speedi);
+        //if (speedi >0.0)
+        //    Debug.Log("speedid =" + speedi);
 
-        Debug.Log("Mathf.Abs(m_Rigidbody2D.velocity.x)=" + Mathf.Abs(m_Rigidbody2D.velocity.x));
+        //Debug.Log("Mathf.Abs(m_Rigidbody2D.velocity.x)=" + Mathf.Abs(m_Rigidbody2D.velocity.x));
 
         if (faceDirectionX == -1)
         {
@@ -437,7 +440,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        Debug.Log("idle="+m_Animator.GetCurrentAnimatorStateInfo(0).IsName("Ukkoidle"));
+        //Debug.Log("idle="+m_Animator.GetCurrentAnimatorStateInfo(0).IsName("Ukkoidle"));
 
     
 

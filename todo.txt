@@ -1,0 +1,22 @@
+kokeile 2 collideria
+
+
+-----------
+
+
+
+
+--- o ----
+
+
+
+-------------
+tee ne hyppyhommat itse niin, ett‰ tajuat miten ne toimii, deletoi turhat pois
+
+
+---------
+tee oma hyppyj‰rjeselm‰ jos sein‰ oikea tai vasen puoli ja suunta samaan -> higher velocity y
+hypp‰‰ ns. sein‰‰ pitkin
+
+
+
